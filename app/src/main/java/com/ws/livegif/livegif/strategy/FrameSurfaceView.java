@@ -192,7 +192,7 @@ public class FrameSurfaceView extends SurfaceView implements SurfaceHolder.Callb
     }
 
     /**
-     * 结束动画,清掉线程
+     *  结束动画,清掉线程
      */
     public void stop() {
         mIsThreadRunning = false;
