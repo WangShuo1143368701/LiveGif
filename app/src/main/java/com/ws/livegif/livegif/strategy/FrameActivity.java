@@ -1,5 +1,6 @@
 package com.ws.livegif.livegif.strategy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.ws.livegif.livegif.R;
+import com.ws.livegif.livegif.dialog.DialogActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -141,7 +143,8 @@ public class FrameActivity extends AppCompatActivity {
                 frameSurfaceview.start();
                 break;
             case R.id.button10:
-
+                Intent intent = new Intent(FrameActivity.this, DialogActivity.class);
+                startActivity(intent);
                 break;
             case frame_surfaceview:
                 break;
