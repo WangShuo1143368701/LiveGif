@@ -1,6 +1,8 @@
 package com.ws.livegif.livegif.dialog;
 
+import android.app.Activity;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
@@ -25,6 +27,14 @@ public class FansDialog extends DialogFragment {
     private int pWidth;
     private int pHeight;
 
+    private Activity activity;
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.activity = (Activity) context;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +46,7 @@ public class FansDialog extends DialogFragment {
     public void onStart() {
         super.onStart();
         DisplayMetrics dm = new DisplayMetrics();
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
+        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
         pWidth = dm.widthPixels;
         pHeight = dm.heightPixels;
 
@@ -44,7 +54,7 @@ public class FansDialog extends DialogFragment {
         WindowManager.LayoutParams lp = window.getAttributes();
         lp.gravity = Gravity.BOTTOM;
         lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-        lp.height = (int) (pHeight*0.8);  // 高
+        lp.height = (int) (pHeight*0.3);  // 高
         window.getAttributes().windowAnimations = R.style.Dialog;
         window.setAttributes(lp);
         getDialog().setCanceledOnTouchOutside(true);
