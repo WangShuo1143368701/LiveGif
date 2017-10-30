@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.ws.livegif.livegif.R;
+import com.ws.livegif.livegif.SwipeMenuLayout.SXListActivity;
 import com.ws.livegif.livegif.dialog.DialogActivity;
 
 import butterknife.BindView;
@@ -135,12 +136,14 @@ public class FrameActivity extends AppCompatActivity {
                 frameSurfaceview.start();
                 break;
             case R.id.button9:
-                //设置资源文件
+                /*//设置资源文件
                 frameSurfaceview.setBitmapAssetFile("gif/crow");
 
                 //设置单张图片展示时长
                 frameSurfaceview.setGapTime(50);
-                frameSurfaceview.start();
+                frameSurfaceview.start();*/
+                Intent intent2 = new Intent(FrameActivity.this, SXListActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.button10:
                 Intent intent = new Intent(FrameActivity.this, DialogActivity.class);

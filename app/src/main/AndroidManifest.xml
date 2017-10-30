@@ -22,6 +22,8 @@
         <activity android:name=".dialog.DialogActivity"/>
         <activity android:name=".webrtc.WebRTCActivity">
         </activity>
+        <activity android:name=".SwipeMenuLayout.SXListActivity">
+        </activity>
     </application>
 
 </manifest>

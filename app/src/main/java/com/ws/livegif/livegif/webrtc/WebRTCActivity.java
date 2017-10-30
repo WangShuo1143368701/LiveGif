@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.ws.livegif.livegif.R;
 
-public class WebRTCActivity extends AppCompatActivity {
+public class WebRTCActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
